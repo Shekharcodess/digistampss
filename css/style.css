@@ -749,9 +749,9 @@ a, a:hover {
   color: #fff;
 }
 
-@media (max-width: 991.98px) {
+@media (max-width: 480px) {
   .cover-v1 .heading {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 }
 
@@ -772,7 +772,7 @@ a, a:hover {
 }
 
 .cover-v1 .subheading {
-  font-size: 33px;
+  font-size: 1.2rem;
   color: #fff;
 }
 
