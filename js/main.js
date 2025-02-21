@@ -181,18 +181,6 @@ var siteMenuClone = function() {
 }; 
 
 
-
-
- var siteIstotope = function() {
-	 var $container = $('#posts').isotope({
-		 itemSelector: '.item',
-		 isFitWidth: true,
-		 percentPosition: true,
-});
-
-	 $(window).on('resize', function() {
-		 $container.isotope('layout');
-	 });
 var owlCarouselPlugin = function() {
 
 	$('.testimonial-slider').owlCarousel({
