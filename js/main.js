@@ -150,9 +150,12 @@ var siteMenuClone = function() {
 
 	$('body').on('click', '.arrow-collapse', function(e) {
     var $this = $(this);
-    $this.toggleClass('active'); // Toggle active class for visual feedback
-      $this.closest('li').find('.collapse').collapse('toggle'); // Use Bootstrap's collapse toggle
-      e.preventDefault();  
+    if ( $this.closest('li').find('.collapse').hasClass('show') ) {
+      $this.removeClass('active');
+    } else {
+      $this.addClass('active');
+    }
+    e.preventDefault();  
     
   });
 
@@ -180,6 +183,15 @@ var siteMenuClone = function() {
 
 }; 
 
+
+
+
+// var siteIstotope = function() {
+
+
+	  
+	
+// }
 
 var owlCarouselPlugin = function() {
 
