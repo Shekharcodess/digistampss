@@ -150,12 +150,9 @@ var siteMenuClone = function() {
 
 	$('body').on('click', '.arrow-collapse', function(e) {
     var $this = $(this);
-    if ( $this.closest('li').find('.collapse').hasClass('show') ) {
-      $this.removeClass('active');
-    } else {
-      $this.addClass('active');
-    }
-    e.preventDefault();  
+    $this.toggleClass('active'); // Toggle active class for visual feedback
+      $this.closest('li').find('.collapse').collapse('toggle'); // Use Bootstrap's collapse toggle
+      e.preventDefault();  
     
   });
 
@@ -186,13 +183,16 @@ var siteMenuClone = function() {
 
 
 
-// var siteIstotope = function() {
+ var siteIstotope = function() {
+	 var $container = $('#posts').isotope({
+		 itemSelector: '.item',
+		 isFitWidth: true,
+		 percentPosition: true,
+});
 
-
-	  
-	
-// }
-
+	 $(window).on('resize', function() {
+		 $container.isotope('layout');
+	 });
 var owlCarouselPlugin = function() {
 
 	$('.testimonial-slider').owlCarousel({
